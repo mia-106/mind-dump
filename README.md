@@ -4,7 +4,7 @@
 
 > "将无形的情绪，丢进有形的废纸篓 —— 让每一次倾诉都落地有声。"
 
-[Live Demo](#) | [Report Bug](#) | [Request Feature](#)
+[在线演示](#) | [报告问题](#) | [功能建议](#)
 
 ---
 
@@ -24,19 +24,19 @@ Mind Dump 是一个探索「交互式情绪疗愈」的实验性项目。
 
 ---
 
-## Tech Stack
+## 技术栈
 
-### Frontend
+### 前端
 - **React 18** + **TypeScript** - 类型安全的前端开发
 - **Vite** - 极速开发与构建体验
 - **Tailwind CSS** - 原子化 CSS，快速构建设计系统
 - **Matter.js** - 2D 物理引擎，赋予情绪重力与碰撞
 
-### Backend
+### 后端
 - **Vercel Edge Functions** - Serverless API，全球边缘计算
 - **DeepSeek API** - 基于 Tree of Thoughts 的治愈对话
 
-### DevOps
+### 开发工具
 - **ESLint** + **Prettier** - 代码质量保障
 - **Husky** + **lint-staged** - Git Hooks 自动化
 
@@ -52,15 +52,15 @@ Mind Dump 是一个探索「交互式情绪疗愈」的实验性项目。
 
 ---
 
-## Getting Started
+## 快速开始
 
-### Prerequisites
+### 前置要求
 
 - Node.js >= 18
 - npm / pnpm / yarn
 - DeepSeek API Key
 
-### Installation
+### 安装
 
 ```bash
 # Clone the repository
@@ -74,7 +74,7 @@ npm install
 npm run dev
 ```
 
-### Environment Variables
+### 环境变量
 
 创建 `.env.local` 文件并配置：
 
@@ -82,7 +82,7 @@ npm run dev
 VITE_DEEPSEEK_API_KEY=your_deepseek_api_key_here
 ```
 
-### Build & Deploy
+### 构建与部署
 
 ```bash
 # Build for production
@@ -94,7 +94,7 @@ npm run preview
 
 ---
 
-## Roadmap
+## 路线图
 
 - [ ] 情绪标签系统
 - [ ] 多语言支持
@@ -104,13 +104,13 @@ npm run preview
 
 ---
 
-## License
+## 许可证
 
-Distributed under the MIT License. See `LICENSE` for more information.
+基于 MIT 许可证发布。详见 `LICENSE` 文件。
 
 ---
 
-## Acknowledgments
+## 致谢
 
 - [Matter.js](https://brm.io/matter-js/) - 2D 物理引擎
 - [Vercel](https://vercel.com/) - 部署平台
@@ -118,4 +118,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-*Built with craft by a fellow builder. Let's make something meaningful.*
