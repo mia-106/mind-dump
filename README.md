@@ -43,8 +43,8 @@
     *   DeepSeek API (LLM)
 
 ##  Demo
+<video src="https://github.com/user-attachments/assets/4312d578-fca8-4a33-946f-418a4a448c81" controls="controls" width="100%" style="max-width: 800px;"></video>
 
-> [\[(https://github.com/user-attachments/assets/4312d578-fca8-4a33-946f-418a4a448c81)\]]
 
 ##  Prerequisites
 
