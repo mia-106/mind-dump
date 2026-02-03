@@ -1,114 +1,95 @@
 # Mind Dump
 
-## 每日事项可视化堆叠器 (Daily Task Visualizer)
+> **"将流逝的时间，堆叠成可触的成就 —— 让每一天都掷地有声。"**
 
-> "将流逝的时间，堆叠成可触的成就 —— 让每一天都掷地有声。"
-
-[在线演示](#) | [报告问题](#) | [功能建议](#)
-
----
-
-## 关于项目
-
-Mind Dump 是一个探索「时间可视化」的实验性项目。
-
-灵感来源于番茄钟的小物件堆叠功能 —— 当完成一段时间的专注，就会获得一个小物件放在主页，看着小物件慢慢堆叠起来很有成就感。但有一个问题：很多时候我在做事情时没有使用番茄钟，导致这一天很多事情没有被记录起来。
-
-于是我产生了这个想法：做一个小软件来记录每天做了什么事情，然后通过堆叠的方式可视化今天干了什么。
-
-你可以在做完这件事情后丢下一个纸团，也可以到了晚上把做的事情全部丢下去 —— 这样就有一种"今天也干了很多事情，没有白干"的感觉。
-
-### 设计哲学
-
-- **交互哲学**：用 Matter.js 物理引擎赋予事项实体感，碰撞与堆积模拟真实世界的积累体验
-- **时间感知**：为每件事添加时间标签，让"干了多久"变得具象可感
-- **灵活记录**：支持实时记录与批量回溯，不强制任何工作流
-- **设计语言**："Lil." Style × Neo-Brutalism（新野兽派），高饱和色 (#F4D03F) + 硬阴影，粗粝而温暖
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![React](https://img.shields.io/badge/React-19.0-61dafb.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6.svg)
 
 ---
 
-## 技术栈
+##  Introduction
 
-### 前端
-- **React 18** + **TypeScript** - 类型安全的前端开发
-- **Vite** - 极速开发与构建体验
-- **Tailwind CSS** - 原子化 CSS，快速构建设计系统
-- **Matter.js** - 2D 物理引擎，赋予纸团重力与碰撞
+**Mind Dump** 是一个探索「时间可视化」的实验性项目。它的核心理念是将抽象的“任务完成”转化为具象的“物理堆叠”。
 
-### 后端
-- **Vercel Edge Functions** - Serverless API，全球边缘计算
+在日常工作中，我们完成的任务往往随着时间的流逝而消散。Mind Dump 允许你在完成任务后，将其“揉成”一个纸团丢入虚拟的垃圾桶中。利用物理引擎，这些纸团会真实地碰撞、堆叠。到了晚上，看着满屏幕的纸团，你会获得一种直观的成就感 —— “今天没有白过”。
 
-### 开发工具
-- **ESLint** + **Prettier** - 代码质量保障
-- **Husky** + **lint-staged** - Git Hooks 自动化
+此外，项目集成了 **DeepSeek AI** 作为你的“时光合伙人”和“灵魂镜像”。它不仅仅是简单的自动回复，而是通过“思维树决策模型”分析你的情绪与状态，提供深层的接纳、现实的锚点或幽默的调侃。
 
----
+##  Architecture
 
-## 核心亮点
+本项目采用现代化的前后端分离架构（Serverless 模式）：
 
-- **物理化记录** - 输入事项 + 时间 → 生成纸团 → 物理碰撞与堆积，每一次记录都有反馈
-- **时间标签** - 为每件事记录耗时，让投入的时间一目了然
-- **灵活的记录方式** - 实时记录 or 批量回溯，不改变你的工作习惯
-- **成就可视化** - 看着纸团慢慢堆叠，感受一天的充实
-- **日历审计** - 将每日事项聚合，回溯与自我觉察
-- **Neo-Brutalism 设计** - 硬朗线条 + 高饱和色，温暖而有力
+### Data Flow
+1.  **User Action**: 用户在前端输入任务内容并“丢弃”。
+2.  **Physics Simulation**: 前端利用 `Matter.js` 实时解算纸团的物理运动（重力、碰撞、摩擦）。
+3.  **AI Interaction**:
+    *   前端将任务内容发送至 `/api/chat`。
+    *   后端 (Vercel Edge Function) 接收请求，构建 Prompt（包含思维树决策模型）。
+    *   调用 **DeepSeek API** 获取智能回复。
+    *   AI 的回复（颜色、文案）被回传给前端，渲染在纸团或界面上。
 
----
+### Tech Stack
+*   **Frontend**:
+    *   React 19 + TypeScript
+    *   Vite (Build Tool)
+    *   Tailwind CSS (Styling with Neo-Brutalism design)
+    *   Matter.js (2D Physics Engine)
+    *   Framer Motion (Animations)
+*   **Backend**:
+    *   Node.js / Vercel Serverless Functions
+*   **AI**:
+    *   DeepSeek API (LLM)
 
-## 快速开始
+##  Demo
 
-### 前置要求
+> [\[(https://github.com/user-attachments/assets/4312d578-fca8-4a33-946f-418a4a448c81)\]]
 
-- Node.js >= 18
-- npm / pnpm / yarn
+##  Prerequisites
 
-### 安装
+在开始之前，请确保您的开发环境满足以下要求：
 
+*   **Node.js**: >= 18.0.0
+*   **Package Manager**: npm, pnpm, or yarn
+*   **API Key**: 一个有效的 DeepSeek API Key
+
+##  Installation & Running
+
+### 1. Clone the repository
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/mind-dump.git
+git clone https://github.com/your-username/mind-dump.git
 cd mind-dump
+```
 
-# Install dependencies
+### 2. Install dependencies
+```bash
 npm install
+```
 
-# Start development server
+### 3. Configure Environment
+在项目根目录下创建一个 `.env` 文件，并添加以下配置（参考 Configuration 章节）：
+```bash
+cp .env.example .env # 如果有示例文件
+# 或者直接新建 .env
+```
+
+### 4. Start Development Server
+```bash
 npm run dev
 ```
+启动后，访问 `http://localhost:5173` 即可体验。
 
-### 构建与部署
+##  Configuration
 
-```bash
-# Build for production
-npm run build
+项目主要依赖环境变量来配置 AI 服务。请在根目录下创建 `.env` 文件：
 
-# Preview production build
-npm run preview
-```
+| Variable | Description | Required |
+| :--- | :--- | :--- |
+| `DEEPSEEK_API_KEY` | DeepSeek 平台的 API 密钥，用于驱动 AI 回复功能 | Yes |
 
----
+> **注意**: 请勿将包含真实 API Key 的 `.env` 文件提交到版本控制系统中。
 
-## 路线图
+## 📄 License
 
-- [ ] 事项分类/标签系统
-- [ ] 时间统计与图表
-- [ ] 多天数据对比
-- [ ] 数据导出功能
-- [ ] 移动端手势优化
-
----
-
-## 许可证
-
-基于 MIT 许可证发布。详见 `LICENSE` 文件。
-
----
-
-## 致谢
-
-- [Matter.js](https://brm.io/matter-js/) - 2D 物理引擎
-- [Vercel](https://vercel.com/) - 部署平台
-- [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
-
----
-
+本项目采用 [MIT License](LICENSE) 开源协议。
