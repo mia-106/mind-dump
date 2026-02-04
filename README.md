@@ -7,11 +7,11 @@
 ![React](https://img.shields.io/badge/React-19.0-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6.svg)
 
-### 🔗 [点击体验 Mind Dump 在线版](https://mind-dump-pi.vercel.app/)
+### [点击体验 Mind Dump 在线版](https://mind-dump-pi.vercel.app/)
 
 ---
 
-## 📖 项目简介
+## 项目简介
 
 **Mind Dump** 是一个探索「时间可视化」的实验性项目。它的核心理念是将抽象的“任务完成”转化为具象的“物理堆叠”。
 
@@ -19,7 +19,7 @@
 
 此外，项目集成了 **DeepSeek AI** 作为你的“时光合伙人”和“灵魂镜像”。它不仅仅是简单的自动回复，而是通过“思维树决策模型”分析你的情绪与状态，提供深层的接纳、现实的锚点或幽默的调侃。
 
-## 🏗 技术架构
+## 技术架构
 
 本项目采用现代化的前后端分离架构（Serverless 模式）：
 
@@ -44,11 +44,11 @@
 *   **人工智能**:
     *   DeepSeek API (大语言模型)
 
-## 📺 演示视频
+## 演示视频
 <video src="https://github.com/user-attachments/assets/4312d578-fca8-4a33-946f-418a4a448c81" controls="controls" width="100%" style="max-width: 800px;"></video>
 
 
-## ✅ 环境要求
+## 环境要求
 
 在开始之前，请确保您的开发环境满足以下要求：
 
@@ -56,7 +56,7 @@
 *   **包管理器**: npm, pnpm, 或 yarn
 *   **API Key**: 一个有效的 DeepSeek API Key
 
-## 🚀 安装与运行
+## 安装与运行
 
 ### 1. 克隆仓库
 ```bash
@@ -82,7 +82,7 @@ npm run dev
 ```
 启动后，访问 `http://localhost:5173` 即可体验。
 
-## ⚙️ 配置说明
+## 配置说明
 
 项目主要依赖环境变量来配置 AI 服务。请在根目录下创建 `.env` 文件：
 
@@ -92,6 +92,6 @@ npm run dev
 
 > **注意**: 请勿将包含真实 API Key 的 `.env` 文件提交到版本控制系统中。
 
-## 📄 开源协议
+## 开源协议
 
 本项目采用 [MIT License](LICENSE) 开源协议。
