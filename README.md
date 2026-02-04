@@ -7,6 +7,8 @@
 ![React](https://img.shields.io/badge/React-19.0-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6.svg)
 
+### 🔗 [Click here to try Mind Dump Live](https://minddump.vercel.app)
+
 ---
 
 ##  Introduction
